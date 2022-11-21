@@ -1,0 +1,29 @@
+
+<Scheme version="1.3" LastUpgradeVersion="1000">
+    <BuildAction buildImplicitDependencies="YES" parallelizeBuildables="YES">
+        <BuildActionEntries>
+            <BuildActionEntry buildForRunning="YES" buildForProfiling="YES" buildForAnalyzing="YES" buildForTesting="YES" buildForArchiving="YES">
+                <BuildableReference BlueprintIdentifier="B8CCD225CF002A6800000000" ReferencedContainer="container:Mediapipe.xcodeproj" BuildableIdentifier="primary" BlueprintName="HandDetectionGpuApp" BuildableName="HandDetectionGpuApp.app"></BuildableReference>
+            </BuildActionEntry>
+        </BuildActionEntries>
+    </BuildAction>
+    <TestAction selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" shouldUseLaunchSchemeArgsEnv="YES" buildConfiguration="__TulsiTestRunner_Debug" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" customLLDBInitFile="$(PROJECT_FILE_PATH)/.tulsi/Utils/lldbinit">
+        <Testables></Testables>
+        <BuildableProductRunnable runnableDebuggingMode="0">
+            <BuildableReference BlueprintIdentifier="B8CCD225CF002A6800000000" ReferencedContainer="container:Mediapipe.xcodeproj" BuildableIdentifier="primary" BuildableName="HandDetectionGpuApp.app" BlueprintName="HandDetectionGpuApp"></BuildableReference>
+        </BuildableProductRunnable>
+    </TestAction>
+    <LaunchAction launchStyle="0" buildConfiguration="Debug" allowLocationSimulation="YES" useCustomWorkingDirectory="NO" customLLDBInitFile="$(PROJECT_FILE_PATH)/.tulsi/Utils/lldbinit" ignoresPersistentStateOnLaunch="NO" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" debugDocumentVersioning="YES" debugServiceExtension="internal">
+        <EnvironmentVariables></EnvironmentVariables>
+        <BuildableProductRunnable runnableDebuggingMode="0">
+            <BuildableReference BlueprintIdentifier="B8CCD225CF002A6800000000" BuildableName="HandDetectionGpuApp.app" BuildableIdentifier="primary" BlueprintName="HandDetectionGpuApp" ReferencedContainer="container:Mediapipe.xcodeproj"></BuildableReference>
+        </BuildableProductRunnable>
+    </LaunchAction>
+    <ProfileAction buildConfiguration="__TulsiTestRunner_Release" shouldUseLaunchSchemeArgsEnv="YES" useCustomWorkingDirectory="NO" debugDocumentVersioning="YES">
+        <BuildableProductRunnable runnableDebuggingMode="0">
+            <BuildableReference BuildableIdentifier="primary" ReferencedContainer="container:Mediapipe.xcodeproj" BuildableName="HandDetectionGpuApp.app" BlueprintName="HandDetectionGpuApp" BlueprintIdentifier="B8CCD225CF002A6800000000"></BuildableReference>
+        </BuildableProductRunnable>
+    </ProfileAction>
+    <AnalyzeAction buildConfiguration="Debug"></AnalyzeAction>
+    <ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES"></ArchiveAction>
+</Scheme>

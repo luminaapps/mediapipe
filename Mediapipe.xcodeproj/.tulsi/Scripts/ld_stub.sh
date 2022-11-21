@@ -1,4 +1,5 @@
-# Copyright 2020 The MediaPipe Authors.
+#!/bin/bash
+# Copyright 2022 The Tulsi Authors. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,16 +12,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# Stub for Xcode's ld invocations to avoid linking but still create the expected
+# linker outputs.
 
-"""Configuration helper for iOS app bundle ids and provisioning profiles.
-"""
+set -eu
 
-BUNDLE_ID_PREFIX = "af0b09f1-aae0-4ff7-b96c-cde5ce56cbc4.mediapipe.examples"
+while test $# -gt 0
+do
+  case $1 in
+  *.dat)
+    # Create an empty .dat file containing just a simple header.
+    echo -n -e '\x00lld\0' > $1
+    ;;
+  *)
+    ;;
+  esac
 
-# Look for a provisioning profile in the example's directory first,
-# otherwise look for a common one.
-def example_provisioning():
-    local_profile = native.glob(["provisioning_profile.mobileprovision"])
-    if local_profile:
-        return local_profile[0]
-    return "//mediapipe/examples/ios:provisioning_profile"
+  shift
+done

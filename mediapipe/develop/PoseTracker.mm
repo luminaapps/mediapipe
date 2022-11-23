@@ -15,7 +15,7 @@ static const char* kVideoQueueLabel = "com.google.mediapipe.example.videoQueue";
 @end
 
 @interface Landmark()
-- (instancetype)initWithX:(float)x y:(float)y z:(float)z;
+- (instancetype)initWithX:(CGFloat)x y:(CGFloat)y z:(CGFloat)z visibility:(CGFloat)visibility;
 @end
 
 @implementation PoseTracker {}
@@ -57,7 +57,7 @@ static const char* kVideoQueueLabel = "com.google.mediapipe.example.videoQueue";
     return newGraph;
 }
 
-- (instancetype)init
+- (nonnull instancetype)init
 {
     self = [super init];
     if (self) {
@@ -99,7 +99,8 @@ static const char* kVideoQueueLabel = "com.google.mediapipe.example.videoQueue";
         for (int i = 0; i < landmarks.landmark_size(); ++i) {
             Landmark *landmark = [[Landmark alloc] initWithX:landmarks.landmark(i).x()
                                                            y:landmarks.landmark(i).y()
-                                                           z:landmarks.landmark(i).z()];
+                                                           z:landmarks.landmark(i).z()
+                                                           visibility:landmarks.landmark(i).visibility()];
             [result addObject:landmark];
         }
         [_delegate poseTracker: self didOutputLandmarks: result];
@@ -117,13 +118,14 @@ static const char* kVideoQueueLabel = "com.google.mediapipe.example.videoQueue";
 
 @implementation Landmark
 
-- (instancetype)initWithX:(float)x y:(float)y z:(float)z
+- (instancetype)initWithX:(CGFloat)x y:(CGFloat)y z:(CGFloat)z visibility:(CGFloat)visibility
 {
     self = [super init];
     if (self) {
         _x = x;
         _y = y;
         _z = z;
+        _visibility = visibility;
     }
     return self;
 }
